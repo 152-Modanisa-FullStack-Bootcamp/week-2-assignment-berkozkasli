@@ -7,13 +7,13 @@
 
 
     <div class="container">
-    <videocom
+    <favvideocom
     v-for="vid in json"
     :key="vid.id"
-    :videocom="vid"
+    :favvideocom="vid"
     >
       
-    </videocom>
+    </favvideocom>
     </div>
   
   </div>
@@ -21,12 +21,12 @@
 
 <script>
 
-import VideoCom from "@/components/VideoCom"
+import FavVideoCom from "@/components/FavVideoCom"
 import $ from 'jquery'; 
 
 export default {
   name: 'HelloWorld',
-  components : { videocom : VideoCom},
+  components : { favvideocom : FavVideoCom},
   props: {
     msg: String
   },
@@ -54,6 +54,7 @@ export default {
 <style scoped>
 .container{
   display: flex;
+  flex-direction: column;
   align-content: space-between;
   flex-wrap: wrap;
 }
@@ -66,4 +67,6 @@ export default {
   display: flex;
   justify-content:flex-end;
 }
+
+
 </style>
